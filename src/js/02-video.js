@@ -17,7 +17,7 @@ const onPlay = function(event) {
 player.on('timeupdate', throttle(onPlay, 1000));
 
 //Під час перезавантаження сторінки скористайся методом setCurrentTime() з метою відновлення відтворення зі збереженої позиції.
-player.setCurrentTime(localStorage.getItem(STORAGE_KEY));
+player.setCurrentTime(localStorage.getItem(STORAGE_KEY) || 0);
 
 
 
